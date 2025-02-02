@@ -8,10 +8,6 @@ import CourseSideBar from "@/components/layout/CourseSideBar";
 import Topbar from "@/components/layout/Topbar";
 
 // ✅ Fix: Correctly define params without Promise issues
-interface PageProps {
-  params?: Promise<{ courseId: string }>;
-  searchParams?: Promise<any>;
-}
 
 interface LayoutProps {
   children: ReactNode;
