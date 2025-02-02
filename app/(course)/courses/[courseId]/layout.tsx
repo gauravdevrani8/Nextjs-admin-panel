@@ -8,7 +8,6 @@ import CourseSideBar from "@/components/layout/CourseSideBar";
 import Topbar from "@/components/layout/Topbar";
 
 // ✅ Fix: Correctly define params without Promise issues
-
 interface LayoutProps {
   children: ReactNode;
   params: Promise<{ courseId: string }>; // Expecting params as a Promise
@@ -18,7 +17,6 @@ interface LayoutProps {
 export default async function CourseDetailsLayout({
   children,
   params,
-  searchParams, // Access searchParams if needed
 }: LayoutProps) {
   const session = await auth();
   const userId = session?.userId;
